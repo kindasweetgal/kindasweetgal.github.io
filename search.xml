@@ -44,4 +44,21 @@
 <p>聚类算法：组织计算机集群，社交网络分析，市场细分，天文数据分析</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>吴恩达机器学习 课时2 学习笔记</title>
+    <url>/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="吴恩达机器学习-课时2"><a href="#吴恩达机器学习-课时2" class="headerlink" title="吴恩达机器学习 课时2"></a>吴恩达机器学习 课时2</h1><h3 id="课时2-1-模型描述"><a href="#课时2-1-模型描述" class="headerlink" title="课时2-1 模型描述"></a>课时2-1 模型描述</h3><p>房价</p>
+<p>m=训练样本数量</p>
+<p>x=输入变量/特征</p>
+<p>y=输出变量/目标变量</p>
+<p>（x，y）一个训练样本</p>
+<p>（x<sup>(i)</sup>,y<sup>(i)</sup>） 第i个样本·</p>
+<p>h假设函数（hypothesis ）</p>
+<h3 id="课时2-2-代价函数"><a href="#课时2-2-代价函数" class="headerlink" title="课时2-2 代价函数"></a>课时2-2 代价函数</h3><p>h<sub>θ</sub>（x)=θ<sub>0</sub>+θ<sub>1</sub>*x</p>
+<p>尽量选择参数合理准确地预测y</p>
+<p>代价函数：（平方误差代价函数）<br>$$<br>minimize \frac{1}{2m}\sum_{i=1}^m(h_θ(x^{(i)})-y^{(i)})^2<br>$$<br>（加二分之一为了好求导）</p>
+<h3 id="课时2-3-代价函数（一）"><a href="#课时2-3-代价函数（一）" class="headerlink" title="课时2-3 代价函数（一）"></a>课时2-3 代价函数（一）</h3><p>![](F:\blog\blog\source_posts\pictures\cost function.png)</p>
+<h3 id="课时2-4-代价函数（二）"><a href="#课时2-4-代价函数（二）" class="headerlink" title="课时2-4 代价函数（二）"></a>课时2-4 代价函数（二）</h3><p>代价函数计算，等高线绘制</p>
+<h3 id="课时2-5-梯度下降"><a href="#课时2-5-梯度下降" class="headerlink" title="课时2-5 梯度下降"></a>课时2-5 梯度下降</h3>]]></content>
+  </entry>
 </search>
