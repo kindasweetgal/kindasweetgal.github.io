@@ -3,7 +3,12 @@
   <entry>
     <title>吴恩达机器学习 课时 1 学习笔记</title>
     <url>/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B6%201%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<a id="more"></a>
+    <content><![CDATA[<p>title: 进步中。。<br>date: 2020-06-06 10:44:13<br>tags:</p>
+<ul>
+<li>机器学习</li>
+<li>学习笔记</li>
+</ul>
+<a id="more"></a>
 
 <h1 id="吴恩达机器学习-课时-1-学习笔记"><a href="#吴恩达机器学习-课时-1-学习笔记" class="headerlink" title="吴恩达机器学习 课时 1 学习笔记"></a>吴恩达机器学习 课时 1 学习笔记</h1><h2 id="课时1-1-欢迎参加《机器学习》课程"><a href="#课时1-1-欢迎参加《机器学习》课程" class="headerlink" title="课时1-1 欢迎参加《机器学习》课程"></a>课时1-1 欢迎参加《机器学习》课程</h2><h5 id="机器学习："><a href="#机器学习：" class="headerlink" title="机器学习："></a>机器学习：</h5><p>​    1.人工智能发展出来的一个领域</p>
 <p>​    2.计算机开发的一项新功能</p>
@@ -27,13 +32,10 @@
 <h2 id="课时1-4-无监督学习"><a href="#课时1-4-无监督学习" class="headerlink" title="课时1-4 无监督学习"></a>课时1-4 无监督学习</h2><p>Unsupervised algorithm</p>
 <p>聚类算法：组织计算机集群，社交网络分析，市场细分，天文数据分析</p>
 ]]></content>
-      <tags>
-        <tag>机器学习</tag>
-      </tags>
   </entry>
   <entry>
-    <title>吴恩达机器学习 课时2 学习笔记</title>
-    <url>/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <title>进步中。。</title>
+    <url>/2020/06/07/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<a id="more"></a>
 
 <h1 id="吴恩达机器学习-课时2"><a href="#吴恩达机器学习-课时2" class="headerlink" title="吴恩达机器学习 课时2"></a>吴恩达机器学习 课时2</h1><h3 id="课时2-1-模型描述"><a href="#课时2-1-模型描述" class="headerlink" title="课时2-1 模型描述"></a>课时2-1 模型描述</h3><p>m=训练样本数量</p>
@@ -56,6 +58,7 @@
 ]]></content>
       <tags>
         <tag>机器学习</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
 </search>

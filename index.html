@@ -8,7 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>kinda的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我很好我要自信">
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+    <style>
+    .pace .pace-progress {
+        background: #6d6d6d; /*进度条颜色*/
+        height: 2px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #6d6d6d; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #6d6d6d;    /*上边框颜色*/
+        border-left-color: #6d6d6d;    /*左边框颜色*/
+    }
+  </style>
+<meta name="description" content="我很好我要自信">
 <meta property="og:type" content="website">
 <meta property="og:title" content="kinda的博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
@@ -21,7 +36,7 @@
     <link rel="alternative" href="/atom.xml" title="kinda的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/bitbug_favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -62,6 +77,9 @@
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 			</ul>
+		</nav>
+		<nav>
+    			总文章数 2
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -165,13 +183,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">吴恩达机器学习 课时2 学习笔记</a>
+      <a class="article-title" href="/2020/06/07/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">进步中。。</a>
     </h1>
   
 
         
-        <a href="/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-06-06T14:34:31.087Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-06</time>
+        <a href="/2020/06/07/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2020-06-07T02:44:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-07</time>
 </a>
         
       </header>
@@ -212,6 +230,10 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -220,7 +242,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/06/07/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
         </p>
       
 
@@ -270,30 +292,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-
-<h1 id="吴恩达机器学习-课时-1-学习笔记"><a href="#吴恩达机器学习-课时-1-学习笔记" class="headerlink" title="吴恩达机器学习 课时 1 学习笔记"></a>吴恩达机器学习 课时 1 学习笔记</h1><h2 id="课时1-1-欢迎参加《机器学习》课程"><a href="#课时1-1-欢迎参加《机器学习》课程" class="headerlink" title="课时1-1 欢迎参加《机器学习》课程"></a>课时1-1 欢迎参加《机器学习》课程</h2><h5 id="机器学习："><a href="#机器学习：" class="headerlink" title="机器学习："></a>机器学习：</h5><p>​    1.人工智能发展出来的一个领域</p>
-<p>​    2.计算机开发的一项新功能</p>
-<h5 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h5><p>​    1.数据挖掘</p>
-<p>​        自动化、互联网上的大量数据</p>
-<p>​    2.不能用手来编程的应用</p>
-<p>​        手写识别，自然语言处理和计算机视觉</p>
-<p>​    3.私人定制程序</p>
-<p>​        产品推荐</p>
-<p>​    4.理解人类学习（大脑、真实的AI）</p>
-<h2 id="课时1-2-什么是机器学习"><a href="#课时1-2-什么是机器学习" class="headerlink" title="课时1-2 什么是机器学习"></a>课时1-2 什么是机器学习</h2><h5 id="机器学习的定义："><a href="#机器学习的定义：" class="headerlink" title="机器学习的定义："></a>机器学习的定义：</h5><p>Arthur Samuel：Field of study that gives computers the ability to learn without being explicitly programmed.</p>
-<p>在没有明确设置的情况下，使计算机具有学习能力的研究领域</p>
-<p>Tom Mitchell ：Well-posed Learning Problem: A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measure by P, improves with experience E.</p>
-<p>计算机程序从经验E中进行学习，解决某一任务T，进行某一性能度量P，通过P测定在T上的表现因经验E提高。</p>
-<h5 id="机器学习算法："><a href="#机器学习算法：" class="headerlink" title="机器学习算法："></a>机器学习算法：</h5><pre><code>监督学习</code></pre><p>​    无监督学习</p>
-<p>其他： 强化学习，推荐系统</p>
-<h2 id="课时1-3-监督学习"><a href="#课时1-3-监督学习" class="headerlink" title="课时1-3 监督学习"></a>课时1-3 监督学习</h2><p>例子：房价预测，肿瘤良性or恶性预测</p>
-<p><strong>监督学习</strong>：给一个数据集其中包括了<strong>正确答案</strong>，</p>
-<p><strong>1. 回归问题</strong>：预测更多连续的有价值的输出</p>
-<p><strong>2. 分类</strong>：预测一个（组）离散值输出</p>
-<h2 id="课时1-4-无监督学习"><a href="#课时1-4-无监督学习" class="headerlink" title="课时1-4 无监督学习"></a>课时1-4 无监督学习</h2><p>Unsupervised algorithm</p>
-<p>聚类算法：组织计算机集群，社交网络分析，市场细分，天文数据分析</p>
-
+        <p>title: 进步中。。<br>date: 2020-06-06 10:44:13<br>tags:</p>
+<ul>
+<li>机器学习</li>
+<li>学习笔记</li>
+</ul>
+        
+          <a class="article-more-a" href="/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B6%201%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more">more >></a>
+        
       
 
       
@@ -301,17 +307,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -440,6 +435,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,28 +6,44 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>吴恩达机器学习 课时2 学习笔记 | kinda的博客</title>
+  <title>进步中。。 | kinda的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="吴恩达机器学习 课时2课时2-1 模型描述m&#x3D;训练样本数量 x&#x3D;输入变量&#x2F;特征 y&#x3D;输出变量&#x2F;目标变量 （x，y）一个训练样本 （x(i),y(i)） 第i个样本· h假设函数（hypothesis ） 课时2-2 代价函数hθ（x)&#x3D;θ0+θ1*x 尽量选择参数合理准确地预测y 代价函数：（平方误差代价函数）$$minimize \frac{1}{2m}\sum_{i&#x3D;1}^m(h_θ(x^">
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+    <style>
+    .pace .pace-progress {
+        background: #6d6d6d; /*进度条颜色*/
+        height: 2px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #6d6d6d; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #6d6d6d;    /*上边框颜色*/
+        border-left-color: #6d6d6d;    /*左边框颜色*/
+    }
+  </style>
+<meta name="description" content="吴恩达机器学习 课时2课时2-1 模型描述m&#x3D;训练样本数量 x&#x3D;输入变量&#x2F;特征 y&#x3D;输出变量&#x2F;目标变量 （x，y）一个训练样本 （x(i),y(i)） 第i个样本· h假设函数（hypothesis ） 课时2-2 代价函数hθ（x)&#x3D;θ0+θ1*x 尽量选择参数合理准确地预测y 代价函数：（平方误差代价函数）$$minimize \frac{1}{2m}\sum_{i&#x3D;1}^m(h_θ(x^">
 <meta property="og:type" content="article">
-<meta property="og:title" content="吴恩达机器学习 课时2 学习笔记">
-<meta property="og:url" content="http://yoursite.com/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="进步中。。">
+<meta property="og:url" content="http://yoursite.com/2020/06/07/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="kinda的博客">
 <meta property="og:description" content="吴恩达机器学习 课时2课时2-1 模型描述m&#x3D;训练样本数量 x&#x3D;输入变量&#x2F;特征 y&#x3D;输出变量&#x2F;目标变量 （x，y）一个训练样本 （x(i),y(i)） 第i个样本· h假设函数（hypothesis ） 课时2-2 代价函数hθ（x)&#x3D;θ0+θ1*x 尽量选择参数合理准确地预测y 代价函数：（平方误差代价函数）$$minimize \frac{1}{2m}\sum_{i&#x3D;1}^m(h_θ(x^">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="f:%5Cblog%5Cblog%5Csource_posts%5Cpictures%5Cgradient_descent.jpg">
 <meta property="og:image" content="f:%5Cblog%5Cblog%5Csource_posts%5Cpictures%5C2-7.png">
-<meta property="article:published_time" content="2020-06-06T14:34:31.087Z">
-<meta property="article:modified_time" content="2020-06-11T08:09:33.744Z">
+<meta property="article:published_time" content="2020-06-07T02:44:13.000Z">
+<meta property="article:modified_time" content="2020-06-11T11:51:57.121Z">
 <meta property="article:author" content="hyliu">
 <meta property="article:tag" content="机器学习">
+<meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="f:%5Cblog%5Cblog%5Csource_posts%5Cpictures%5Cgradient_descent.jpg">
   
     <link rel="alternative" href="/atom.xml" title="kinda的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/bitbug_favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -68,6 +84,9 @@
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 			</ul>
+		</nav>
+		<nav>
+    			总文章数 2
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -169,13 +188,13 @@
         
   
     <h1 class="article-title" itemprop="name">
-      吴恩达机器学习 课时2 学习笔记
+      进步中。。
     </h1>
   
 
         
-        <a href="/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-06-06T14:34:31.087Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-06</time>
+        <a href="/2020/06/07/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2020-06-07T02:44:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-07</time>
 </a>
         
       </header>
@@ -237,6 +256,10 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -291,7 +314,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/07/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -434,6 +457,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
             
             <div class="clearfix"></div>
