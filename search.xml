@@ -53,9 +53,10 @@
   <entry>
     <title>吴恩达机器学习 课时 1 学习笔记</title>
     <url>/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B6%201%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<a id="more"></a>
+    <content><![CDATA[<p>简单记录</p>
+<a id="more"></a>
 
-<h1 id="吴恩达机器学习-课时-1-学习笔记"><a href="#吴恩达机器学习-课时-1-学习笔记" class="headerlink" title="吴恩达机器学习 课时 1 学习笔记"></a>吴恩达机器学习 课时 1 学习笔记</h1><h2 id="课时1-1-欢迎参加《机器学习》课程"><a href="#课时1-1-欢迎参加《机器学习》课程" class="headerlink" title="课时1-1 欢迎参加《机器学习》课程"></a>课时1-1 欢迎参加《机器学习》课程</h2><h5 id="机器学习："><a href="#机器学习：" class="headerlink" title="机器学习："></a>机器学习：</h5><p>​    1.人工智能发展出来的一个领域</p>
+<h2 id="课时1-1-欢迎参加《机器学习》课程"><a href="#课时1-1-欢迎参加《机器学习》课程" class="headerlink" title="课时1-1 欢迎参加《机器学习》课程"></a>课时1-1 欢迎参加《机器学习》课程</h2><h5 id="机器学习："><a href="#机器学习：" class="headerlink" title="机器学习："></a>机器学习：</h5><p>​    1.人工智能发展出来的一个领域</p>
 <p>​    2.计算机开发的一项新功能</p>
 <h5 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h5><p>​    1.数据挖掘</p>
 <p>​        自动化、互联网上的大量数据</p>
@@ -86,9 +87,10 @@
   <entry>
     <title>吴恩达机器学习 课时2 学习笔记</title>
     <url>/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B62%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<a id="more"></a>
+    <content><![CDATA[<p>简单记录</p>
+<a id="more"></a>
 
-<h1 id="吴恩达机器学习-课时-2-学习笔记"><a href="#吴恩达机器学习-课时-2-学习笔记" class="headerlink" title="吴恩达机器学习 课时 2 学习笔记"></a>吴恩达机器学习 课时 2 学习笔记</h1><h3 id="课时2-1-模型描述"><a href="#课时2-1-模型描述" class="headerlink" title="课时2-1 模型描述"></a>课时2-1 模型描述</h3><p>m=训练样本数量</p>
+<h3 id="课时2-1-模型描述"><a href="#课时2-1-模型描述" class="headerlink" title="课时2-1 模型描述"></a>课时2-1 模型描述</h3><p>m=训练样本数量</p>
 <p>x=输入变量/特征</p>
 <p>y=输出变量/目标变量</p>
 <p>（x，y）一个训练样本</p>
