@@ -1,11 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>leetcode：两数之和 python实现</title>
-    <url>/2020/06/15/leetcode%EF%BC%9A%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%20python%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<p>题目描述：<br><strong>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。<br>来源：力扣（LeetCode）</strong></p>
+    <title>leetcode 7整数反转（python）</title>
+    <url>/2020/06/26/leetcode%207%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC%EF%BC%88python%EF%BC%89/</url>
+    <content><![CDATA[<p>— tags:    “leetcode刷题记录” —</p>
 <a id="more"></a>
 
+<p><strong>题目描述</strong><br>给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</p>
+<p>示例 1:<br>输入: 123<br>输出: 321</p>
+<p> 示例 2:<br>输入: -123<br>输出: -321</p>
+<p>示例 3:<br>输入: 120<br>输出: 21<br>注意:</p>
+<p>假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−2的31次方,  2的31次方 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。</p>
+<p>来源：力扣（LeetCode）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverse</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type x: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        flag=<span class="number">1</span></span><br><span class="line">        <span class="comment"># python对整数除法采用“向下取整”机制，所以正数和负数要区别运算</span></span><br><span class="line">        <span class="comment">#这里全部转化为正数</span></span><br><span class="line">        <span class="keyword">if</span> x&lt;<span class="number">0</span>: </span><br><span class="line">            x=-x</span><br><span class="line">            flag = <span class="number">0</span></span><br><span class="line">        y=<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> x !=<span class="number">0</span>:</span><br><span class="line">            y=y*<span class="number">10</span>+x%<span class="number">10</span></span><br><span class="line">            x=x/<span class="number">10</span></span><br><span class="line">        y = y <span class="keyword">if</span> flag <span class="keyword">else</span> -y</span><br><span class="line">        <span class="keyword">if</span> y&gt;pow(<span class="number">2</span>,<span class="number">31</span>)<span class="number">-1</span> <span class="keyword">or</span> y&lt;pow(<span class="number">-2</span>,<span class="number">31</span>): <span class="keyword">return</span> <span class="number">0</span>    <span class="comment">#判断是否溢出</span></span><br><span class="line">        <span class="keyword">return</span> y</span><br></pre></td></tr></table></figure>
+<p>执行用时：36 ms<br>内存消耗：12.6 MB</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>leetcode刷题9回文数（python）</title>
+    <url>/2020/06/26/leetcode%E5%88%B7%E9%A2%989%E5%9B%9E%E6%96%87%E6%95%B0%EF%BC%88python%EF%BC%89/</url>
+    <content><![CDATA[<p>— tags:    “leetcode刷题记录” —</p>
+<a id="more"></a>
+
+<p><strong>题目描述</strong><br>判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p>
+<p>示例 1:</p>
+<p>输入: 121<br>输出: true<br>示例 2:</p>
+<p>输入: -121<br>输出: false<br>解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。<br>示例 3:</p>
+<p>输入: 10<br>输出: false<br>解释: 从右向左读, 为 01 。因此它不是一个回文数。<br>进阶:</p>
+<p>你能不将整数转为字符串来解决这个问题吗？</p>
+<p>来源：力扣（LeetCode）<br><strong>1.普通方法解决</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type x: int</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        </span><br><span class="line">        y=<span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> x==<span class="number">0</span>: <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">if</span> x&lt;<span class="number">0</span> <span class="keyword">or</span> x%<span class="number">10</span>==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">while</span> x!=<span class="number">0</span>:</span><br><span class="line">            y=y*<span class="number">10</span>+x%<span class="number">10</span></span><br><span class="line">            x=x/<span class="number">10</span></span><br><span class="line">            <span class="keyword">if</span> x&lt;=y:</span><br><span class="line">                <span class="keyword">if</span> x==y <span class="keyword">or</span> x==y/<span class="number">10</span>: <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">                </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<p>108 ms    12.7 MB<br>速度超过97%的用户，第一次。。</p>
+<p><strong>2.利用字符串解决：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type x: int</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        </span><br><span class="line">        x=str(x)</span><br><span class="line">        s=<span class="string">''</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(x)):</span><br><span class="line">            s+=x[len(x)-i<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">if</span> s==x:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<pre><code>140 ms    12.6 MB</code></pre>]]></content>
+  </entry>
+  <entry>
+    <title>leetcode 两数相加 python实现</title>
+    <url>/2020/06/24/leetcode%20%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0%20python%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p>— tags:    “leetcode刷题记录” —</p>
+<a id="more"></a>
+
+<p><strong>题目描述：</strong><br>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。</p>
+<p>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p>
+<p>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
+<!-- more -->
+
+<p><strong>示例：</strong></p>
+<p>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807</p>
+<p>来源：力扣（LeetCode）</p>
+<p>官方实现java：<a href="https://leetcode-cn.com/problems/add-two-numbers/solution/liang-shu-xiang-jia-by-leetcode/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/add-two-numbers/solution/liang-shu-xiang-jia-by-leetcode/</a></p>
+<p>执行用时 :92 ms<br>内存消耗 :12.9 MB</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addTwoNumbers</span><span class="params">(self, l1, l2)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type l1: ListNode</span></span><br><span class="line"><span class="string">        :type l2: ListNode</span></span><br><span class="line"><span class="string">        :rtype: ListNode</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        f=<span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="literal">None</span>: <span class="comment">#python原来用is判断啊</span></span><br><span class="line">            <span class="keyword">return</span> l2</span><br><span class="line">        <span class="keyword">if</span> l2 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l1</span><br><span class="line">        l3=ListNode(<span class="number">0</span>) <span class="comment">#每个节点都要new一个</span></span><br><span class="line">        res =l3</span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">or</span> l2:   <span class="comment">#python 原来是or啊</span></span><br><span class="line">            summ=<span class="number">0</span></span><br><span class="line">            <span class="keyword">if</span> l1 :</span><br><span class="line">                summ+=l1.val</span><br><span class="line">                l1=l1.next</span><br><span class="line">            <span class="keyword">if</span> l2 :</span><br><span class="line">                summ+=l2.val</span><br><span class="line">                l2=l2.next</span><br><span class="line">            <span class="keyword">if</span> (summ+f)&gt;<span class="number">9</span> :</span><br><span class="line">                res.next=ListNode(summ+f<span class="number">-10</span>)</span><br><span class="line">                f=<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span> :</span><br><span class="line">                res.next=ListNode(summ+f)</span><br><span class="line">                f=<span class="number">0</span></span><br><span class="line">            res=res.next</span><br><span class="line">        <span class="keyword">if</span> f!=<span class="number">0</span>:</span><br><span class="line">            res.next=ListNode(f)</span><br><span class="line">        <span class="keyword">return</span> l3.next</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>leetcode：两数之和 python实现</title>
+    <url>/2020/06/15/leetcode%EF%BC%9A%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%20python%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p>— tags:    “leetcode刷题记录” —</p>
+<a id="more"></a>
+
+<p>题目描述：<br><strong>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。<br>来源：力扣（LeetCode）</strong></p>
 <p>参照官方文档实现, 刚学python，详细记录不会的点</p>
 <p><strong>方法一：暴力解题，双重循环</strong><br>脑子里只有这一种方法。。</p>
 <p><strong>收获：1.  list的长度函数len()<br>           2.  range()</strong></p>
@@ -51,6 +107,68 @@
 ]]></content>
   </entry>
   <entry>
+    <title>吴恩达机器学习编程练习1：线性回归（python）</title>
+    <url>/2020/06/24/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A01%EF%BC%9A%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%EF%BC%88python%EF%BC%89/</url>
+    <content><![CDATA[<p>— tags:    “机器学习” —</p>
+<a id="more"></a>
+
+<h2 id="一：返回一个5阶单位矩阵"><a href="#一：返回一个5阶单位矩阵" class="headerlink" title="一：返回一个5阶单位矩阵"></a>一：返回一个5阶单位矩阵</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">warmupExercise</span><span class="params">()</span>:</span></span><br><span class="line">	E5=np.eye(<span class="number">5</span>)</span><br><span class="line">	print(<span class="string">'这是一个五阶单位矩阵'</span>)</span><br><span class="line">	print(E5)</span><br><span class="line"></span><br><span class="line">warmupExercise()</span><br></pre></td></tr></table></figure>
+
+<h2 id="二：线性回归"><a href="#二：线性回归" class="headerlink" title="二：线性回归"></a>二：线性回归</h2><p><strong>1.含有一个变量，大意是：假如你是一个饭店老板，要在其他城市拓展业务，现有数据在ex1data.txt第一列是人口，第二列是收益</strong><br>导包</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
+<p>将数据读取，进行展示</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data = pd.read_csv(<span class="string">'ex1data1.txt'</span>,names=[<span class="string">'Population'</span>,<span class="string">'Profit'</span>])</span><br><span class="line">data.describe()</span><br><span class="line">data.plot(x=<span class="string">'Population'</span>,y=<span class="string">'Profit'</span>,kind=<span class="string">'scatter'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200624145847565.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RhaXN5X2Rf,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data.describe()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020062414593137.png" alt="在这里插入图片描述"><br>定义损失函数：<br><img src="https://img-blog.csdnimg.cn/20200624152110203.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020062415212672.png" alt="在这里插入图片描述"></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#代价函数</span></span><br><span class="line">    <span class="comment"># * 在matrix类型中是矩阵的叉乘，multiply是对应元素相乘</span></span><br><span class="line">    <span class="comment"># * 在ndarray类型中，dot或 @ 是叉乘，* 是对应元素相乘</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">computeCost</span><span class="params">(X,y,theta)</span>:</span></span><br><span class="line">    inner = np.power(((X*theta.T) - y ),<span class="number">2</span>)</span><br><span class="line">    <span class="keyword">return</span> np.sum(inner)/(<span class="number">2</span>*len(X))</span><br></pre></td></tr></table></figure>
+<p>能够直接矩阵相乘，增加一列1</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#增加x0</span></span><br><span class="line">data.insert(<span class="number">0</span>,<span class="string">'Ones'</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>将数据分割出来，0-1列是变量x，2列是y</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cols = data.shape[<span class="number">1</span>]</span><br><span class="line">print(cols)</span><br><span class="line">X = data.iloc[:,<span class="number">0</span>:cols<span class="number">-1</span>]</span><br><span class="line">y = data.iloc[:,cols<span class="number">-1</span>:cols]</span><br></pre></td></tr></table></figure>
+<p>3</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">X.head()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020062415255461.png" alt="在这里插入图片描述"></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">y.head()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200624152624552.png" alt="在这里插入图片描述"><br>转化成matrix类型</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">X = np.matrix(X.values)</span><br><span class="line">y = np.matrix(y.values)</span><br><span class="line">theta = np.matrix([<span class="number">0</span>,<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">X.shape,y.shape,theta.shape</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020062415365094.png" alt="在这里插入图片描述"><br>计算代价函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">computeCost(X,y,theta)</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020062415373494.png" alt="在这里插入图片描述"><br>设置梯度下降<br>公式：<img src="https://img-blog.csdnimg.cn/20200624155342686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RhaXN5X2Rf,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gradientDescent</span><span class="params">(X, y, theta, alpha, epoch)</span>:</span></span><br><span class="line">    <span class="string">"""reuturn theta, cost"""</span></span><br><span class="line">    </span><br><span class="line">    temp = np.matrix(np.zeros(theta.shape))  <span class="comment"># 初始化一个 θ 临时矩阵(1, 2)</span></span><br><span class="line">    parameters = int(theta.flatten().shape[<span class="number">1</span>])  <span class="comment"># 参数 θ的数量</span></span><br><span class="line">    cost = np.zeros(epoch)  <span class="comment"># 初始化一个ndarray，包含每次epoch的cost</span></span><br><span class="line">    m = X.shape[<span class="number">0</span>]  <span class="comment"># 样本数量m</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(epoch):</span><br><span class="line">        <span class="comment"># 利用向量化一步求解</span></span><br><span class="line">        temp =theta - (alpha / m) * (X * theta.T - y).T * X</span><br><span class="line"><span class="comment"># 以下是不用Vectorization求解梯度下降</span></span><br><span class="line"><span class="comment">#         error = (X * theta.T) - y  # (97, 1)</span></span><br><span class="line">        </span><br><span class="line"><span class="comment">#         for j in range(parameters):</span></span><br><span class="line"><span class="comment">#             term = np.multiply(error, X[:,j])  # (97, 1)</span></span><br><span class="line"><span class="comment">#             temp[0,j] = theta[0,j] - ((alpha / m) * np.sum(term))  # (1,1)        </span></span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">        theta = temp</span><br><span class="line">        cost[i] = computeCost(X, y, theta)</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span> theta, cost</span><br></pre></td></tr></table></figure>
+<p>设置学习率和迭代次数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alpha = <span class="number">0.01</span></span><br><span class="line">epoch = <span class="number">1000</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">final_theta,cost = gradientDescent(X,y,theta,alpha,epoch)</span><br></pre></td></tr></table></figure>
+<p>计算最后的损失</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">computeCost(X ,y ,final_theta)</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200624155632330.png" alt="在这里插入图片描述"><br>绘制线性模型以及数据，直观地看出它的拟合。</p>
+<p>np.linspace()在指定的间隔内返回均匀间隔的数字。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.linspace(data.Population.min(),data.Population.max(),<span class="number">100</span>)</span><br><span class="line">f = final_theta[<span class="number">0</span>,<span class="number">0</span>] + (final_theta[<span class="number">0</span>,<span class="number">1</span>]*x) <span class="comment">#预测值</span></span><br><span class="line">fig, ax = plt.subplots(figsize=(<span class="number">6</span>,<span class="number">4</span>))</span><br><span class="line">ax.plot(x, f,<span class="string">'r'</span>, label = <span class="string">'Prediction'</span>)</span><br><span class="line">ax.scatter(data[<span class="string">'Population'</span>],data.Profit,label=<span class="string">'Traing Data'</span>)</span><br><span class="line">ax.legend(loc=<span class="number">2</span>)</span><br><span class="line">ax.set_xlabel(<span class="string">'Population'</span>)</span><br><span class="line">ax.set_ylabel(<span class="string">'Profit'</span>)</span><br><span class="line">ax.set_title(<span class="string">'Predicted Profit vs. Population Size'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200624155808626.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RhaXN5X2Rf,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>将cost绘制出来</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">fig, ax = plt.subplots(figsize=(<span class="number">8</span>,<span class="number">4</span>))</span><br><span class="line">ax.plot(np.arange(epoch),cost,<span class="string">'r'</span>)</span><br><span class="line">ax.set_xlabel(<span class="string">'Iterations'</span>)</span><br><span class="line">ax.set_ylabel(<span class="string">'Cost'</span>)</span><br><span class="line">ax.set_title(<span class="string">'Error vs. Training Epoch'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200624162229456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RhaXN5X2Rf,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>2.多个变量：ex2data.txt第一列房子大小，第二列房子卧室数量，第三列房子价格。预测房价。</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">path = <span class="string">'ex1data2.txt'</span></span><br><span class="line">data2 = pd.read_csv(path, names=[<span class="string">'Size'</span>, <span class="string">'Bedrooms'</span>,<span class="string">'Price'</span>])</span><br><span class="line">data2.head()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200624162755689.png" alt="在这里插入图片描述"><br>预处理步骤 - 特征归一化</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data2 = (data2 - data2.mean())/data2.std()</span><br><span class="line">data2.head()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># add ones column</span></span><br><span class="line">data2.insert(<span class="number">0</span>, <span class="string">'Ones'</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># set X (training data) and y (target variable)</span></span><br><span class="line">cols = data2.shape[<span class="number">1</span>]</span><br><span class="line">X2 = data2.iloc[:,<span class="number">0</span>:cols<span class="number">-1</span>]</span><br><span class="line">y2 = data2.iloc[:,cols<span class="number">-1</span>:cols]</span><br><span class="line"></span><br><span class="line"><span class="comment"># convert to matrices and initialize theta</span></span><br><span class="line">X2 = np.matrix(X2.values)</span><br><span class="line">y2 = np.matrix(y2.values)</span><br><span class="line">theta2 = np.matrix(np.array([<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]))</span><br><span class="line"></span><br><span class="line"><span class="comment"># perform linear regression on the data set</span></span><br><span class="line">g2, cost2 = gradientDescent(X2, y2, theta2, alpha, epoch)</span><br><span class="line"></span><br><span class="line"><span class="comment"># get the cost (error) of the model</span></span><br><span class="line">computeCost(X2, y2, g2), g2</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020062422411519.png" alt="在这里插入图片描述"><br>绘制代价函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">fig, ax = plt.subplots(figsize=(<span class="number">12</span>,<span class="number">8</span>))</span><br><span class="line">ax.plot(np.arange(epoch),cost2,<span class="string">'r'</span>)</span><br><span class="line">ax.set_xlabel(<span class="string">'Iterations'</span>)</span><br><span class="line">ax.set_ylabel(<span class="string">'Cost'</span>)</span><br><span class="line">ax.set_title(<span class="string">'Error vs. Training Epoch'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020062422401064.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RhaXN5X2Rf,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>利用sklearn自带的线性回归</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> linear_model</span><br><span class="line">model = linear_model.LinearRegression()</span><br><span class="line">model.fit(X,y)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x =np.array(X[:,<span class="number">1</span>].A1)</span><br><span class="line">f = model.predict(X).flatten()</span><br><span class="line"></span><br><span class="line">fig,ax = plt.subplots(figsize=(<span class="number">8</span>,<span class="number">5</span>))</span><br><span class="line">ax.plot(x, f , <span class="string">'r'</span>,label=<span class="string">'Prediction'</span>)</span><br><span class="line">ax.scatter(data.Population,data.Profit,label=<span class="string">'Traning Data'</span>)</span><br><span class="line">ax.legend(loc=<span class="number">2</span>)</span><br><span class="line">ax.set_xlabel(<span class="string">'Population'</span>)</span><br><span class="line">ax.set_ylabel(<span class="string">'Profit'</span>)</span><br><span class="line">ax.set_title(<span class="string">'Predicted Profit vs. Population Size'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200624224230128.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RhaXN5X2Rf,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>直接求解的方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#正规方程</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">normalEpn</span><span class="params">(X,y)</span>:</span></span><br><span class="line">    theta = np.linalg.inv(X.T@X)@X.T@y</span><br><span class="line">    <span class="keyword">return</span> theta</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">final_theta2 = normalEpn(X,y)</span><br><span class="line">final_theta</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200624224302997.png" alt="在这里插入图片描述"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>吴恩达机器学习 课时 1 学习笔记</title>
     <url>/2020/06/06/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%20%E8%AF%BE%E6%97%B6%201%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>简单记录</p>
@@ -82,6 +200,30 @@
 <li>机器学习</li>
 <li>学习笔记</li>
 </ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>吴恩达机器学习课时3学习笔记</title>
+    <url>/2020/06/26/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E6%97%B63%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><strong>关键词：线性回归，特征缩放，正规方程</strong></p>
+<p>— tags:    “机器学习” —</p>
+<a id="more"></a>
+
+<p><img src="https://img-blog.csdnimg.cn/20200626151250164.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RhaXN5X2Rf,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>吴恩达机器学习课时6学习笔记</title>
+    <url>/2020/06/26/%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E6%97%B66%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><strong>logistic回归解决分类问题</strong>，新的代价函数</p>
+<p>— tags:    “机器学习” —</p>
+<a id="more"></a>
+
+<p><img src="https://img-blog.csdnimg.cn/20200626151627744.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RhaXN5X2Rf,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><strong>线性回归和logistic回归不一样的是：</strong></p>
+<ol>
+<li>h（x）不一样。</li>
+<li>logistic是分类问题，命名为回归是历史原因。<br><img src="https://img-blog.csdnimg.cn/2020062615171481.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RhaXN5X2Rf,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ol>
 ]]></content>
   </entry>
   <entry>
